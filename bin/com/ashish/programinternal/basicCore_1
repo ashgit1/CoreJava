@@ -1,0 +1,221 @@
+
+PATH: http://www.javatpoint.com/java-tutorial
+
+Setting Java Path in Linux OS:
+------------------------------
+
+Setting the path in Linux OS is same as setting the path in the Windows OS. 
+But here we use export tool rather than set. Let's see how to set path in Linux OS:
+
+export PATH=$PATH:/home/jdk1.6.01/bin/
+Here, we have installed the JDK in the home directory under Root (/home).
+
+JVM Runtime Instance:
+---------------------
+Whenever you write java command on the command prompt to run the java class, and instance of JVM is created.
+
+JVM Stack:
+----------
+Each thread has a private JVM stack, created at the same time as thread.
+A new frame is created each time a method is invoked. A frame is destroyed when its method invocation completes.
+
+JVM execution engines:
+----------------------
+
+Interpreter: 
+Read bytecode stream then execute the instructions.
+
+Just-In-Time(JIT) compiler: 
+It is used to improve the performance.
+"JIT compiles parts of the byte code that have similar functionality at the same time, 
+and hence reduces the amount of time needed for compilation"
+
+Here the term "Compiles" refer to the translator from the instruction set of JVM to the instruction set of specific CPU.
+
+Note:
+-----
+
+Why char uses 2 byte in java and what is \u0000 ?
+Because java uses unicode system rather than ASCII code system. \u0000 is the lowest range of unicode system.
+'\u0000' -- decimal equivalent is 00 and Char equivalent is NULL.
+
+Unicode System:
+---------------
+
+"Unicode is a universal international standard character encoding that is capable of representing most of 
+the world's written languages.
+
+Why java uses Unicode System?
+
+Before Unicode, there were many language standards:
+1. ASCII (American Standard Code for Information Interchange) for the United States.
+2. ISO 8859-1 for Western European Language.
+3. KOI-8 for Russian.
+4. GB18030 and BIG-5 for chinese, and so on.
+
+This caused two problems:
+-------------------------
+
+A particular code value corresponds to different letters in the various language standards.
+The encodings for languages with large character sets have variable length.Some common characters are encoded as single bytes, other require two or more byte.
+To solve these problems, a new language standard was developed i.e. Unicode System.
+In unicode, character holds 2 byte, so java also uses 2 byte for characters.
+lowest value:\u0000
+highest value:\uFFFF
+
+
+Question) Why Method Overloaing is not possible by changing the return type of method?
+
+In java, method overloading is not possible by changing the return type of the method because there may occur ambiguity. 
+Let's see how ambiguity may occur. ex :Calculation.java
+
+Question) Can we overload main() method?
+
+Yes, by method overloading. You can have any number of main methods in a class by method overloading. 
+Let's see the simple example: Overloading.java
+
+Method Overloading and TypePromotion:
+-------------------------------------
+
+One type is promoted to another implicitly if no matching datatype is found. 
+Byte can be promoted to short, int, long, float or double. 
+The short datatype can be promoted to int,long,float or double. 
+The char datatype can be promoted to int,long,float or double and so on.
+
+Java Copy Constructor:
+----------------------
+
+There is no copy constructor in java. But, we can copy the values of one object to another like copy constructor in C++.
+There are many ways to copy the values of one object into another in java. 
+
+They are:
+
+1. By constructor
+2. By assigning the values of one object into another
+3. By clone() method of Object class
+
+Q) Does constructor return any value?
+Ans:yes, that is current class instance (You cannot use return type yet it returns a value).
+
+Q) Can constructor perform other tasks instead of initialization?
+Yes, like object creation, starting a thread, calling method etc. You can perform any operation in the constructor as you perform in the method.
+
+
+Restrictions for static method:
+-------------------------------
+
+There are two main restrictions for the static method. They are:
+1. The static method can not use non static data member or call non-static method directly.
+2. This and super cannot be used in static context.
+
+Q) Can we execute a program without main() method?
+
+Ans) Yes, one of the way is static block but in previous version of JDK not in JDK 1.7.
+class A3{  
+  static{  
+  System.out.println("static block is invoked");  
+  System.exit(0);  
+  }  
+}  
+
+Output:static block is invoked (if not JDK7)
+In JDK7 and above, output will be:
+
+Output:Error: Main method not found in class A3, please define the main method as:
+public static void main(String[] args)
+
+Usage of java this keyword:
+---------------------------
+
+Here is given the 6 usage of java this keyword:
+
+1. this keyword can be used to refer current class instance variable.
+2. this() can be used to invoke current class constructor.
+3. this keyword can be used to invoke current class method (implicitly)
+4. this can be passed as an argument in the method call.
+5. this can be passed as argument in the constructor call.
+6. this keyword can also be used to return the current class instance.
+
+Inheritance:
+------------
+
+Inheritance represents the IS-A relationship, also known as parent-child relationship.
+
+Aggregation in Java:
+--------------------
+
+If a class have an entity reference, it is known as Aggregation. 
+"Aggregation represents HAS-A relationship."
+
+Consider a situation, Employee object contains many informations such as id, name, emailId etc. 
+It contains one more object named address, which contains its own informations such as city, state, country, zipcode etc. 
+as given below.
+
+When use Aggregation?
+
+Code reuse is also best achieved by aggregation when there is no is-a relationship.
+Inheritance should be used only if the relationship is-a is maintained throughout the lifetime of the objects involved; 
+otherwise, aggregation is the best choice.
+
+Q) Can we override static method?
+No, static method cannot be overridden. It can be proved by runtime polymorphism, so we will learn it later.
+
+Q) Why we cannot override static method?
+Because static method is bound with class whereas instance method is bound with object. 
+Static belongs to class area and instance belongs to heap area.
+
+Q) Can we override java main method?
+No, because main is a static method.
+
+Role of Private Constructor:
+----------------------------
+
+If you make any class constructor private, you cannot create the instance of that class from outside the class.
+Note: A class cannot be private or protected except nested class.
+
+Default access modifier:
+------------------------
+
+If you don't use any modifier, it is treated as default bydefault. 
+The default modifier is accessible only within package.
+
+
+protected access modifier:
+--------------------------
+
+The protected access modifier is accessible within package and outside the package but through inheritance only.
+The protected access modifier can be applied on the data member, method and constructor. 
+It can't be applied on the class.
+
+Access Modifiers:
+-----------------
+
+-----------------------------------------------------------------------------------------------------------
+Access Modifier |	within class  |	 within package | outside package by subclass only  |  outside package|
+-----------------------------------------------------------------------------------------------------------
+Private			|		Y		  |		    N		|				N					|		N 		  |
+-----------------------------------------------------------------------------------------------------------
+Default			|		Y		  |			Y		|				N					|		N  	      |
+-----------------------------------------------------------------------------------------------------------
+Protected		|		Y		  |			Y		|				Y					|		N         |
+-----------------------------------------------------------------------------------------------------------
+Public			|		Y		  |			Y		|				Y					|		Y         |
+-----------------------------------------------------------------------------------------------------------
+
+Summary:
+--------
+
+private is more restrictive than default.
+default is more restrictive than protected.
+protected is more restrictive than public.
+
+Note:
+-----
+
+If you are overriding any method, overridden method (i.e. declared in subclass) must not be more restrictive
+"Default methods are only allowed in interfaces."
+
+
+
+
+

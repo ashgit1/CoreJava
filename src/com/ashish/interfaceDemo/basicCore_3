@@ -1,0 +1,114 @@
+Interface:
+----------
+
+The interface in java is a mechanism to achieve fully abstraction
+Java Interface also represents IS-A relationship.
+
+It is used to achieve fully abstraction.
+By interface, we can support the functionality of multiple inheritance.
+It can be used to achieve loose coupling.
+
+Imp:
+----
+methods are public and abstract.
+fields are public, static and final.
+
+Multiple Inheritance through class. ex: TestTnterface1.java
+Multiple Inheritance through Interface. ex: TestTnterface2.java
+
+Q) What is marker or tagged interface?
+
+An interface that have no member is known as marker or tagged interface. 
+For example: Serializable, Cloneable, Remote etc. They are used to provide some essential information to the 
+JVM so that JVM may perform some useful operation.
+
+Package:
+--------
+
+The standard of defining package is domain.company.package e.g. com.javatpoint.bean or org.sssit.dao.
+
+Rule: There can be only one public class in a java source file and it must be saved by the public class name.
+
+Package Class:
+--------------
+The package class provides methods to get information about the specification and implementation of a package. 
+It provides methods such as getName(), getImplementationTitle(), getImplementationVendor(), getImplementationVersion() etc
+
+Clone Object:
+-------------
+
+The object cloning is a way to create exact copy of an object. For this purpose, clone() method of Object class is 
+used to clone an object.
+The java.lang.Cloneable interface must be implemented by the class whose object clone we want to create. 
+If we don't implement Cloneable interface, clone() method generates CloneNotSupportedException.
+The clone() method saves the extra processing task for creating the exact copy of an object.
+
+syntax: protected Object clone() throws CloneNotSupportedException
+
+ex: Student18.java
+
+Array:
+------
+
+What is the class name of java array?
+
+In java, array is an object. For array object, an proxy class is created whose name can be obtained by 
+getClass().getName() method on the object.
+
+ex: ArrayDemo.java
+
+Copying a java array:
+---------------------
+
+We can copy an array to another by the arraycopy method of System class.
+
+
+Call by Value and Call by Reference in Java:
+--------------------------------------------
+
+There is only call by value in java, not call by reference. 
+If we call a method passing a value, it is known as call by value. 
+The changes being done in the called method, is not affected in the calling method.
+
+ex: Operation.java
+
+In case of call by reference original value is changed if we made changes in the called method. 
+If we pass object in place of any primitive value, original value will be changed.
+
+ex: Operation2.java
+
+Java Strictfp Keyword:
+----------------------
+
+Java strictfp keyword ensures that you will get the same result on every platform if you perform operations 
+in the floating-point variable. 
+The precision may differ from platform to platform that is why java programming language have provided the 
+strictfp keyword, so that you get same result on every platform. 
+So, now you have better control over the floating-point arithmetic.
+
+(*) The strictfp keyword can be applied on methods, classes and interfaces.
+(*) The strictfp keyword cannot be applied on abstract methods, variables or constructors.
+
+Creating API Document | javadoc tool:
+-------------------------------------
+
+We can create document api in java by the help of javadoc tool. 
+In the java file, we must use the documentation comment /**... */ to post information for the 
+class, method, constructor, fields etc.
+
+To create the document API, you need to use the javadoc tool followed by java file name. 
+There is no need to compile the javafile. 
+ex: javadoc DocumentAPI.java
+There will be created a lot of html files. 
+Open the index.html file to get the information about the classes
+
+Java Command Line Arguments:
+----------------------------
+
+The java command-line argument is an argument i.e. passed at the time of running the java program.
+
+ex: CommandLine1.java, CommandLine2.java
+
+
+
+

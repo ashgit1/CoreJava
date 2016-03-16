@@ -1,0 +1,139 @@
+Covariant Return Type:
+----------------------
+
+Before Java5, it was not possible to override any method by changing the return type. 
+But now, since Java5, it is possible to override method by changing the return type if subclass overrides any method 
+whose return type is Non-Primitive but it changes its return type to subclass type. 
+ex: covariant.java
+
+Super:
+------
+
+1. super is used to refer immediate parent class instance variable.  [super.varName]
+2. super() is used to invoke immediate parent class constructor.	 [super()]
+3. super is used to invoke immediate parent class method.			 [super.methName()]
+
+Instance initializer block:
+---------------------------
+
+Instance Initializer block is used to initialize the instance data member. 
+It run each time when object of the class is created.
+
+Q) Why use instance initializer block?
+Suppose I have to perform some operations while assigning value to instance data member 
+e.g. a for loop to fill a complex array or error handling etc.
+
+Q) What is invoked firstly instance initializer block or constructor?
+it seems that instance initializer block is firstly invoked but NO. 
+Instance intializer block is invoked at the time of object creation. 
+The java compiler copies the instance initializer block in the constructor after the first statement super(). 
+So firstly, constructor is invoked
+
+Note:
+-----
+
+ The java compiler copies the code of instance initializer block in every constructor after super().
+
+ex: InstanceBlock1.java, InstanceBlock2.java
+
+
+Final Keyword In Java:
+----------------------
+
+variable : can't change value
+method   : can't override
+class	 : can't inherit 
+
+Q) Is final method inherited?
+Ans) Yes, final method is inherited but you cannot override it
+
+Q) What is blank or uninitialized final variable?
+Ans) A final variable that is not initialized at the time of declaration is known as blank final variable.
+It can be initialized only in constructor.
+
+Static blank final variable:
+----------------------------
+
+A static final variable that is not initialized at the time of declaration is known as static blank final variable. 
+It can be initialized only in static block.
+
+Q) What is final parameter?
+If you declare any parameter as final, you cannot change the value of it.
+
+Q) Can we declare a constructor final?
+No, because constructor is never inherited.
+
+Java Runtime Polymorphism with data member:
+-------------------------------------------
+Method is overridden not the datamembers, so runtime polymorphism can't be achieved by data members.
+
+Static and dynamic binding:
+---------------------------
+
+When type of the object is determined at compiled time(by the compiler), it is known as static binding.
+When type of the object is determined at run-time, it is known as dynamic binding.
+
+Java instanceof:
+----------------
+
+The java instanceof operator is used to test whether the object is an instance of the specified type 
+(class or subclass or interface).
+
+Dog1 d=new Dog1();  
+System.out.println(d instanceof Animal);//true 
+
+instanceof in java with a variable that have null value returns false:
+Dog2 d=null;  
+System.out.println(d instanceof Dog2);//false
+
+Advantage:
+----------
+
+if we use instanceof operator, downcasting is possible.
+
+Parent type refers to the object of Sub class, it is known as upcasting.
+Subclass type refers to the object of Parent class, it is known as downcasting.
+
+ex: Dog3.java
+
+Abstract Class:
+--------------
+Abstraction is a process of hiding the implementation details and showing only functionality to the user.
+There are two ways to achieve abstraction in java:
+1. Abstract class (0 to 100%)
+2. Interface (100%)
+
+An abstract class can have data member, abstract method, method body, constructor and even main() method.
+1. Rule: If there is any abstract method in a class, that class must be abstract.
+2. Rule: If you are extending any abstract class that have abstract method, you must either provide the 
+implementation of the method or make this class abstract.
+ex: TestAbstraction2.java
+
+The abstract class can also be used to provide some implementation of the interface. 
+In such case, the end user may not be forced to override all the methods of the interface.
+
+ex: TestAbstraction3.java
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
