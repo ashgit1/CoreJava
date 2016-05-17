@@ -1,0 +1,36 @@
+1. Array : aaabbccccde = a3b2c4de
+2. Diff between equals() and Hashcode.
+3. What is composition in java ?
+4. How to delete one of the two identical rows in table.
+5. Override equals and hashcode methods !
+6. How to remove duplicate element from List ?
+
+Answer:
+-------
+
+1. Find The First Non Repeated Character In A String : FirstNonRepeated.java
+main answer : CharacterCount.java
+
+2 and 5:
+http://www.java2blog.com/2014/02/hashcode-and-equals-method-in-java.html
+http://tutorials.jenkov.com/java-collections/hashcode-equals.html
+(Read 10 times) very good articles.
+http://stackoverflow.com/questions/15130764/what-is-the-default-implementation-of-hashcode
+   
+Equals based on single member : Country.java and EqualsCheck.java
+Equals based on all the members : Employee.java and EqualsCheck2.java
+Hashcode implmetation with equals: HashMapEqualityCheckMain.java
+
+Methods that uses equals() in arrayList:
+list.contains("value");
+list.remove("value");
+
+3. Inheritance : IS-A
+ex: Class Circle extends Shape --> Circle IS-A Shape
+	
+   Composition : HAS-A
+ex: Class User having a member variable as Address --> User HAS-A Address.
+
+4. rownum.
+
+6. RemDuplList.java

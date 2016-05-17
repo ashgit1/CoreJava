@@ -1,0 +1,18 @@
+
+1. Array find median. a1={1,2,3,4,5}; a2={4,6,8,9} without using any third array.
+2. Array : aaabbccccde = a3b2c4de
+3. Thread safe Singleton Class.
+4. Which collections to use for Multithreading ?
+5. Diff between equals() and Hashcode.
+6. HashMap Implementation, with load factor, max limit in a bucket.
+
+Answer:
+-------
+
+4. Here is a very good article on selecting a collection depending on your application
+
+http://www.developer.com/java/article.php/3829891/Selecting-the-Best-Java-Collection-Class-for-Your-Application.htm
+
+you can try this as well
+
+http://www.javamex.com/tutorials/collections/how_to_choose.shtml
