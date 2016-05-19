@@ -15,6 +15,7 @@ Spring
 2) Default scope of bean in spring and also spring controller(MVC)?
 3) How to load spring application context?.What happens?
 4) Spring AOP
+5) Spring IOC main job 
 
 Hibernate
 =======

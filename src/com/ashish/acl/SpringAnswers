@@ -1,0 +1,71 @@
+Spring:
+=======
+
+Ans 1:
+======
+http://stackoverflow.com/questions/3058/what-is-inversion-of-control
+Cons:
+-----
+IoC not only inverts the control flow in your program, it also clouds it considerably. 
+This means you can no longer just read your code and jump from one place to another because the connection between your code 
+is not in the code anymore. 
+Instead it is in XML configuration files or annotations and the in the code of your IoC container that interprets these metadata.
+
+There arises a new class of bugs where you get your XML config or your annotations wrong and you can spend a lot of time 
+finding out why your IoC container injects a null reference into one of your objects under certain conditions
+
+Main answer (refer to diagram): 
+-------------------------------
+http://www.tutorialspoint.com/spring/spring_ioc_containers.htm
+
+Ans 2:
+======
+http://www.tutorialspoint.com/spring/spring_bean_scopes.htm
+http://javarevisited.blogspot.in/2012/05/what-is-bean-scope-in-spring-mvc.html
+
+The default scope is always singleton.
+'request' bean scope allows each HTTP request to have its own instance of bean created and supplied by spring framework.
+'session' bean scope allows Web application to have bean instance per session basis.
+'global' session bean scope is only applicable on portlet aware bean scope and allows bean instance per global session.
+
+Ans 3:
+======
+http://www.tutorialspoint.com/spring/spring_applicationcontext_container.htm
+http://alvinalexander.com/blog/post/java/load-spring-application-context-file-java-swing-application
+http://www.tutorialspoint.com/spring/spring_ioc_containers.htm
+
+Since I prefer ClassPathXmlApplicationContext method to load my applicationContext.xml file, 
+all I have to do for this to work is make sure the applicationContext.xml file is in my class path when I run my Java application. 
+If your CLASSPATH includes your current directory there's really nothing you have to do.
+
+
+Ans 4:
+======
+http://www.tutorialspoint.com/spring/aop_with_spring.htm
+One of the key components of Spring Framework is the Aspect oriented programming (AOP) framework. 
+Aspect Oriented Programming entails breaking down program logic into distinct parts called so-called concerns. 
+The functions that span multiple points of an application are called cross-cutting concerns and these cross-cutting concerns 
+are conceptually separate from the application's business logic. 
+There are various common good examples of aspects like logging, auditing, declarative transactions, security, and caching etc.
+
+The key unit of modularity in OOP is the class, whereas in AOP the unit of modularity is the aspect. 
+Dependency Injection helps you decouple your application objects from each other and 
+AOP helps you decouple cross-cutting concerns from the objects that they affect.
+AOP is like triggers in programming languages such as Perl, .NET, Java and others.
+
+Spring AOP module provides interceptors to intercept an application, 
+for example, when a method is executed, you can add extra functionality before or after the method execution.
+
+Ans 5:
+======
+The Spring container is at the core of the Spring Framework. The container will create the objects, wire them together, 
+configure them, and manage their complete lifecycle from creation till destruction. 
+The Spring container uses dependency injection (DI) to manage the components that make up an application. 
+These objects are called Spring Beans.
+
+The container gets its instructions on what objects to instantiate, configure, and assemble by reading configuration metadata provided. 
+The configuration metadata can be represented either by XML, Java annotations, or Java code. 
+The following diagram is a high-level view of how Spring works. 
+The Spring IoC container makes use of Java POJO classes and configuration metadata to produce a fully configured 
+and executable system or application.
+
