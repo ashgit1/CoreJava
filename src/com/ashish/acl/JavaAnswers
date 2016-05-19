@@ -1,0 +1,88 @@
+Java
+====
+
+1. Inheritance, Polymorphism, Abstarction and Encapsulation.
+------------------------------------
+static in java breaks OOPS concept :
+------------------------------------ 
+http://stackoverflow.com/questions/7026507/why-are-static-variables-considered-evil(*)
+http://stackoverflow.com/questions/19044362/java-encapsulation-concept-not-clear
+http://www.javatpoint.com/static-keyword-in-java
+Best practice is to make static variable as final.
+(
+Static variables are generally considered bad because they represent global state and are therefore much more difficult 
+to reason about. In particular, they break the assumptions of object-oriented programming. 
+In object-oriented programming, each object has its own state, represented by instance (non-static) variables. 
+Static variables represent state across instances which can be much more difficult to unit test. 
+This is mainly because it is more difficult to isolate changes to static variables to a single test.
+That being said, it is important to make a distinction between regular static variables (generally considered bad), 
+and final static variables (AKA constants; not so bad).
+)
+
+============================================================================================================================
+
+Ans 2:
+------
+Prepared Statement: 
+Instances of PreparedStatement contain an SQL statement that has already been compiled. 
+This is what makes a statement "prepared" because PreparedStatement objects are precompiled, 
+their execution can be faster than that of Statement objects. 
+The prepared statement is used to execute sql queries
+
+Callable Statement:
+A CallableStatement object provides a way to call stored procedures in a standard way for all RDBMSs.
+A stored procedure is stored in a database; the call to the stored procedure is what a CallableStatement object contains. 
+
+Other:
+------
+A stored procedure is in the database (permanently compiled) and may be called by a CallableStatment.
+
+A PreparedStatement compiles a query in your java code. It may be re-used, therefore it is pre-compiled...compiled before you use it. 
+Perhaps more important these days, you can use question marks (?) in your query to represent values you need to set 
+using PreparedStatements (cannot do that with plain Statement).
+
+============================================================================================================================
+
+3. DBUtil.java
+
+============================================================================================================================
+
+4. valueOf(int i): This returns an Integer object holding the value of the specified primitive.
+ex: IntegerPrimitive.java
+
+============================================================================================================================
+
+Ans 5:
+------
+http://www.journaldev.com/797/what-is-java-string-pool
+http://www.thejavageek.com/2013/06/19/the-string-constant-pool/
+
+============================================================================================================================
+
+Ans 6:
+------
+http://stackoverflow.com/questions/16069106/how-to-compare-two-java-objects
+http://stackoverflow.com/questions/5807704/java-comparing-custom-objects 
+
+============================================================================================================================
+
+Ans 7:
+------
+http://www.programmerinterview.com/index.php/java-questions/java-whats-the-difference-between-equals-and/
+http://www.java2blog.com/2014/02/hashcode-and-equals-method-in-java.html
+http://tutorials.jenkov.com/java-collections/hashcode-equals.html
+(Read 10 times) very good articles.
+http://stackoverflow.com/questions/15130764/what-is-the-default-implementation-of-hashcode
+Read more at http://www.java2blog.com/2014/02/hashcode-and-equals-method-in-java.html#kLyvxkXVevUe0I46.99
+
+Hashcode() : returns the internal representation of the memory address. Native method. JVM implementation.
+
+-----------------------
+Key points to remember:
+-----------------------
+If you are overriding equals method then you should override hashcode() also.
+If two objects are equal then they must have same hashcode.
+If two objects have same hashcode then they may or may not be equal
+Always use same attributes to generate equals and hashcode as in our case we have used name.
+
+============================================================================================================================

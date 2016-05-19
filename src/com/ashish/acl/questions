@@ -1,0 +1,42 @@
+Java
+====
+1) List the oops concepts.Write a java code, which breaks/doesn’t follow oops concept?
+2) Callable statement Vs Prepared statement.
+3) Code snippet to access database using JDBC?
+4) What does Integer.valueOf(int i) method does?
+5) How does String works?. Explain about string pool.
+6) How do we compare two custom objects?
+7) Why we need to override equals and hashcode method?
+
+
+Spring
+======
+1) How does spring configuration works?
+2) Default scope of bean in spring and also spring controller(MVC)?
+3) How to load spring application context?.What happens?
+4) Spring AOP
+
+Hibernate
+=======
+1) Hibernate configuration
+2) Can you configure multiple database in hibernate?
+3) Write the configuration snippet for configuring database?
+4) Criteria API
+5) How to execute stored procedure in hibernate?
+
+Design questions
+============
+1) Mention any design pattern you have applied in your project?
+2) Design priciples?
+
+REST 
+====
+1) Diff b/w rest and restless?
+2) Which third part tool your using to implement rest?
+3) Path Param Vs Query Param.
+
+General questions
+============
+1) Write down the architecture of your project?
+2) What software methodology followed in your project?
+3) There will be questions on the technologies put in the resume.
