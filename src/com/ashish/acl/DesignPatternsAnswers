@@ -1,0 +1,29 @@
+Design Patterns:
+================
+
+Ans 1:
+======
+Singelton and Factory Method pattern. Explain both by referring to the design patterns learnings.
+
+Ans 2:
+======
+Design Principles: 
+http://www.oodesign.com/design-principles.html
+http://www.dofactory.com/topic/1046/design-patterns-vs-design-principles-solid.aspx
+
+In Short:
+---------
+
+S: Single Responsibility Principle.	|	SRP	
+O: Open Closed Principle.			|	OCP	
+L: Liskov Substitution Principle.	|	LSP	
+I: Interface Segregation Principle.	|	ISP	
+D: Dependency Inversion Principle.	|	DIP
+
+SRP: A Class should have one, and only one, reason to change
+OCP: You should be able to extend a class's behavior, without modifying it.
+LSP: Derived class must be substituted for their base class.
+ISP: Make find grained interfaces that are client specific. Not Fat or Polluted.
+DIP: Depends on Abstraction and not concrete implementation.
+ 
+
