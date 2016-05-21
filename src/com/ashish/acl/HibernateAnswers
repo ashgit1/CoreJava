@@ -1,0 +1,75 @@
+Hibernate:
+==========
+
+Ans 1:
+============
+hibernate.cfg.xml
+
+Ans 3:
+======
+hibernate.cfg.xml, HibernateUtil.java and HibernateTest.java
+
+Ans 4:
+======
+http://www.tutorialspoint.com/hibernate/hibernate_criteria_queries.htm
+My Notes.
+Criteria API which allows you to build up a criteria query object programmatically where you can apply 
+filtration rules and logical conditions.
+
+Ans 2:
+======
+http://javabeat.net/configuring-multiple-databases-in-hibernate/
+
+Yes. We can configure multiple databases in hibernate.
+Note:
+------
+Each database has its own SessionFactory object.
+SessionFactory sessionFactory1 = new  Configuration().configure("oracleconfig.cfg.xml").buildSessionFactory();
+SessionFactory sessionFactory2 = new Configuration().configure("derbyconfig.cfg.xml").buildSessionFactory();
+Specify the name of the configuration file as an argument to the configure() method when building the session factory object.
+
+Ans 5:
+======
+http://www.mkyong.com/hibernate/how-to-call-store-procedure-in-hibernate/
+http://carminedimascio.com/2013/07/java-stored-procedures-with-derby/
+
+1. Native SQL – createSQLQuery:
+-------------------------------
+
+You can use createSQLQuery() to call a store procedure directly.
+
+Java
+Query query = session.createSQLQuery(
+	"CALL GetStocks(:stockCode)")
+	.addEntity(Stock.class)
+	.setParameter("stockCode", "7277");
+			
+List result = query.list();
+for(int i=0; i<result.size(); i++){
+	Stock stock = (Stock)result.get(i);
+	System.out.println(stock.getStockCode());
+}
+
+2. NamedNativeQuery in annotation:
+-----------------------------------
+Declare your store procedure inside the @NamedNativeQueries annotation.
+@NamedNativeQueries({
+	@NamedNativeQuery(
+	name = "callStockStoreProcedure",
+	query = "CALL GetStocks(:stockCode)",
+	resultClass = Stock.class
+	)
+})
+@Entity
+@Table(name = "stock")
+public class Stock implements java.io.Serializable {
+...}
+
+Call it with getNamedQuery():
+-----------------------------
+Query query = session.getNamedQuery("callStockStoreProcedure")
+	.setParameter("stockCode", "7277");
+List result = query.list();
+
+Another ex: My Hibernate Learning tutorials where I have implemented this store procedure logic.
+
