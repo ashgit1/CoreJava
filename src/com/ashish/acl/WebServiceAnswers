@@ -1,0 +1,44 @@
+REST:
+=====
+
+Ans 1:
+------
+
+RESTless means not restful. If you have a web app that does not adhere to RESTful principles then it is not RESTful. ex: SOAP.
+Restful : Must adhere to RestFul principles. Like no protocol dependent, resources identified by address, no specification like wsdl
+in soap.
+In restful model resource is identified by URL (NOUN) and the actions(VERBS) by the predefined methods in HTTP protocols 
+i.e. GET, POST, PUT, DELETE etc.
+
+Explanation very nice: 
+http://www.pinfaq.com/142/difference-between-rest-services-restless-services-example
+
+Ans 2:
+------
+
+I used Jersey framework and JAX-RX api for implementing REST.
+
+Asn3:
+-----
+
+Query parameters are added to the url after the ? mark, while a path parameter is part of the regular URL separated by '/'.
+
+In the URL below tom could be the value of a path parameter and there is one query parameter with the name id and value 1:
+
+http://mydomain.com/tom?id=1
+
+When to use Query parameter or Path Parameter ?
+
+If there is a scenario to retrieve a record based on id, for example you need to get the details of the employee whose id is 15, 
+then you can have resource with @PathParam.
+GET /employee/{id}
+
+If there is a scenario where you need to get the details of all employees but only 10 at a time, you may use query param
+
+GET /employee?start=1&size=10
+
+This says that starting employee id 1 get ten records.
+
+To summarize, 
+use @PathParam for retrieval based on id. 
+Use @QueryParam for filter or if you have any fixed list of options that user can pass.
