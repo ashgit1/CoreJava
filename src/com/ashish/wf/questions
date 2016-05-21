@@ -4,6 +4,7 @@
 4. How to delete one of the two identical rows in table.
 5. Override equals and hashcode methods !
 6. How to remove duplicate element from List ?
+7. Size of HashMap if the key in an Custom Object. Added 3 custom objects in the map.
 
 Answer:
 -------
@@ -34,3 +35,5 @@ ex: Class User having a member variable as Address --> User HAS-A Address.
 4. rownum.
 
 6. RemDuplList.java
+
+7.

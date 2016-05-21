@@ -1,11 +1,9 @@
 package com.ashish.wf;
 
 import java.util.ArrayList;
-import java.util.LinkedHashSet;
 import java.util.List;
-import java.util.Set;
 
-public class RemDuplList {
+public class RemDuplList2 {
 
 	public static void main(String[] args) {
 		
@@ -21,10 +19,7 @@ public class RemDuplList {
 		}
 		
 		long startTime = System.currentTimeMillis();
-		Set<String> set = new LinkedHashSet<String>();
-		set.addAll(al);
-		al.clear();
-		al.addAll(set);
+		al.remove("Ashish");
 		long endTime = System.currentTimeMillis();
 		System.out.println("Time taken in ms to remove duplicates : " + (endTime-startTime) + " ms");
 		
