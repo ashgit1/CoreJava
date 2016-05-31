@@ -41,3 +41,9 @@ General questions
 1) Write down the architecture of your project?
 2) What software methodology followed in your project?
 3) There will be questions on the technologies put in the resume.
+
+Miscellaneous:
+--------------
+1. delete duplicate rows from table (you don't worry about the primary key)
+2. return in try, catch, finally. what will be the flow.
+ 
