@@ -63,7 +63,7 @@ configure them, and manage their complete lifecycle from creation till destructi
 The Spring container uses dependency injection (DI) to manage the components that make up an application. 
 These objects are called Spring Beans.
 
-The container gets its instructions on what objects to instantiate, configure, and assemble by reading configuration metadata provided. 
+The container gets its instructions on what objects to instantiate, configure, and assemble by reading configuration metadata provided.
 The configuration metadata can be represented either by XML, Java annotations, or Java code. 
 The following diagram is a high-level view of how Spring works. 
 The Spring IoC container makes use of Java POJO classes and configuration metadata to produce a fully configured 

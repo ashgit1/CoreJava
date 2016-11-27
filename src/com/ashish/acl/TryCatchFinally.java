@@ -8,7 +8,6 @@ public class TryCatchFinally {
 		System.out.println(ret);
 	}
 
-	@SuppressWarnings("finally")
 	private static int returnValue() {
 
 		int value = 5;
@@ -18,8 +17,8 @@ public class TryCatchFinally {
 		} catch (Exception e) {
 			//return value;
 		} finally {
-			//return value;
 			System.out.println("Ash");
+			//return value;
 		}
 		return 0;
 	}
